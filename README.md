@@ -35,16 +35,12 @@ Il contient notamment des variables décrivant :
 * les montants facturés mensuellement et cumulés ;
 * le statut d'attrition (Churn).
 
-Afin d'enrichir l'analyse, plusieurs mesures DAX ont été développées, notamment :
+Afin d'enrichir l'analyse, 2 variables supplémentaires ont été développées à l'aide du langage DAX, notamment :
 
-* le taux de churn ;
-* le nombre de clients perdus ;
-* la perte totale de revenus (Total Charge Loss) ;
-* la médiane des dépenses mensuelles ;
-* la médiane de l'ancienneté des clients ;
-* les pertes mensuelles associées aux départs.
+* La segmentation des clients par ancienneté(tenure bracket) ;
+* la classification des clients les plus à risques(High risk) ;
 
-Ces indicateurs offrent une vision plus précise des conséquences financières de l'attrition.
+Ces indicateurs offrent une vision plus précise du schéma d'attrition globale.
 
 ---
 
@@ -86,11 +82,19 @@ L'analyse met en évidence plusieurs tendances importantes.
 
 ### 1. Les nouveaux clients présentent le risque de départ le plus élevé
 
-La répartition des départs selon l'ancienneté montre que les clients ayant une faible durée d'abonnement résilient davantage leur contrat. Cette observation suggère que les premiers mois de la relation client constituent une période critique.
+La répartition des départs selon l'ancienneté montre que les clients ayant une faible durée d'abonnement résilient davantage leur contrat. En effet près de 50% des résiliations ont lieu avant les 10  premiers mois dont 20% les 2 premiers mois.
+Cette observation suggère que les premiers mois de la relation client constituent une période critique.
+
+<img width="617" height="277" alt="Screenshot 2026-07-02 180426" src="https://github.com/user-attachments/assets/f1361fa0-9d0b-41fe-9ed0-7b7f1158c313" />
+
+
 
 ### 2. Les contrats les plus courts génèrent davantage de pertes
 
 L'analyse des pertes financières par type de contrat montre que les contrats de courte durée sont associés à une perte de revenus plus importante. Les contrats de longue durée semblent offrir une meilleure fidélisation.
+
+<img width="437" height="273" alt="Screenshot 2026-07-02 181236" src="https://github.com/user-attachments/assets/f6c16b2e-dc99-4ad8-8d23-d46987b81861" />
+
 
 ### 3. Le support technique influence fortement la fidélité
 
@@ -104,9 +108,14 @@ Les clients disposant d'un service de protection des appareils semblent moins en
 
 L'analyse par type de connexion Internet révèle que certains services sont davantage associés aux départs que d'autres. Cette différence peut être liée à la qualité du service, aux performances offertes ou au positionnement tarifaire.
 
+<img width="439" height="281" alt="Screenshot 2026-07-02 181617" src="https://github.com/user-attachments/assets/88e82402-9242-42f6-bb24-5669a4290cd3" />
+
+
 ### 6. L'attrition entraîne une perte financière significative
 
 Les mesures DAX montrent que chaque départ représente non seulement une perte d'abonnement futur mais également une perte importante de chiffre d'affaires cumulé. Le coût économique du churn est donc particulièrement élevé.
+
+
 
 ---
 
